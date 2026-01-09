@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choose | gnillip-Chat</title>
+</head>
+<body>
+    <div>
+        <h5>Hi, {{username}}</h5>
+        <a href="/logout"><button>Logout</button></a>
+        <h3>Choose your Chat-Partner</h3>
+
+        {% for usr in user %}
+            <form action="/chat" method="post">
+                <input type="hidden" name="user" value="{{usr}}">
+                <button type="submit">{{usr}}</button>
+            </form>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat | gnillip-Chat</title>
+</head>
+<body>
+    <div>
+        <a href="/auswahl"><button>back</button></a>
+        <h3>{{name}}</h3>
+
+        {% for element, value in chat.items() %}
+            <p>{{value}}</p>
+            <br><br>
+        {% endfor %}
+
+        <form action="/chat/send" method="post">
+            <input type="hidden" name="chat" value="{{name}}">
+            <label for="message">Message: </label><br>
+            <input type="text" name="message" required><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
