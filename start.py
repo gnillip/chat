@@ -12,7 +12,7 @@ with open("./USER.json", "w") as UserData:
     json.dump(USER, UserData, indent=4)
 
 if os.path.exists("./chats"):
-    for element in os.path.exists("./chats"):
+    for element in os.listdir("./chats"):
         os.remove("./chats/"+element)
 else:
     os.mkdir("./chats")

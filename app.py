@@ -15,6 +15,7 @@ USER_PATH = PATH / "USER.json"
 # Funcs
 def NOW() -> str:
     return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 def read(PATH:str, isJson:bool) -> dict | list:
     """
     Docstring for read
