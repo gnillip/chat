@@ -153,8 +153,7 @@ def __chat():
     sec = security(username)
     if sec[0] != 200:
         abort(sec[0], sec[1])
-    
-    USER = read(str(USER_PATH), True)
+
     user = request.form["user"]
 
     CHAT_NAME =  [user, username]
