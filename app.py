@@ -160,7 +160,7 @@ def __chat():
     CHAT_NAME =  [user, username]
     CHAT_NAME.sort()
     CHAT_NAME = "_-_".join(CHAT_NAME)
-    CHAT_PATH = CHATS / CHAT_NAME
+    CHAT_PATH = str(CHATS / CHAT_NAME)
 
     CHAT = read(CHAT_PATH, True)
     return render_template("chat.html", username=username, chat=CHAT, name=CHAT_NAME)
